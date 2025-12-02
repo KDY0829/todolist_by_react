@@ -1,0 +1,126 @@
+:root {
+  --bg: #0f172a;
+  --fg: #e2e8f0;
+  --card: #0b1220;
+  --border: #334155;
+  --muted: #94a3b8;
+  --primary: #3b82f6;
+  --danger: #ef4444;
+
+  --prio-high: #ef4444;
+  --prio-medium: #f59e0b;
+  --prio-low: #22c55e;
+}
+
+:root[data-theme="light"] {
+  --bg: #f8fafc;
+  --fg: #0f172a;
+  --card: #ffffff;
+  --border: #d1d5db;
+  --muted: #64748b;
+  --primary: #2563eb;
+  --danger: #dc2626;
+
+  --prio-high: #ef4444;
+  --prio-medium: #d97706;
+  --prio-low: #16a34a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Noto Sans KR", Arial;
+  background: var(--bg);
+  color: var(--fg);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.container {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.input,
+.select,
+.btn {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--fg);
+}
+
+.btn.primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.btn.danger {
+  background: var(--danger);
+  border-color: var(--danger);
+  color: #fff;
+}
+
+.editor {
+  display: grid;
+  grid-template-columns: 1fr 120px 120px 170px 90px;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.list {
+  display: grid;
+  gap: 14px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  border-left-width: 6px;
+}
+
+.prio-high {
+  border-left-color: var(--prio-high);
+}
+
+.prio-medium {
+  border-left-color: var(--prio-medium);
+}
+
+.prio-low {
+  border-left-color: var(--prio-low);
+}
+
+.item.done .text {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.week-box {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.theme-toggle {
+  margin-left: auto;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
