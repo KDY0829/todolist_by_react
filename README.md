@@ -8,7 +8,8 @@
 
 ## 🚀 데모 화면
 
-(스크린샷 추가 예정)
+<img width="898" height="846" alt="image" src="https://github.com/user-attachments/assets/a29840ae-bd57-4e2e-90ef-eedb48c22765" />
+
 
 ---
 
